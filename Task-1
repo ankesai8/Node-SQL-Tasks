@@ -1,24 +1,25 @@
 Design DB model for Guvi Zen class
 
------->>>>>>>>>>   
-use zen;
+------>>>>>>>>>> 
+
+                      use zen;
 
 -- USERS------>
 
 CREATE TABLE users(userid INT AUTO_INCREMENT PRIMARY KEY,
                    username VARCHAR(100), 
-                   useremail VARCHAR(100),
+                   userEmail VARCHAR(100),
                    batchid INT);
 
 INSERTING VALUES INTO USERS------------------>
 
                INSERT INTO users(username,useremail,batchid) VALUES("sai","sai@gmail.com",26),
                                                     
-               INSERT INTO users(username,useremail,batchid) VALUES("prasad","sunil88@gmail.com",27),
+               INSERT INTO users(username,useremail,batchid) VALUES("prasad","prasad123@gmail.com",27),
                                                     
-               INSERT INTO users(username,useremail,batchid) VALUES("Amit","amiit99@gmail.com",27),
+               INSERT INTO users(username,useremail,batchid) VALUES("Amitha","amithat99@gmail.com",27),
                                                     
-               INSERT INTO users(username,useremail,batchid) VALUES("Shamika","shamika@gmail.com",26),
+               INSERT INTO users(username,useremail,batchid) VALUES("deepthi","deepthi@gmail.com",26),
                                                     
                INSERT INTO users(username,useremail,batchid) VALUES("Arohi","arohi@gmail.com",26);
 
@@ -26,12 +27,25 @@ INSERTING VALUES INTO USERS------------------>
 
 <----codekata---->
 
-	CREATE TABLE codekata(userid INTEGER, number_of_problems_solved INTEGER,FOREIGN KEY (userid) REFERENCES users(userid));
+	CREATE TABLE codekata(userid INTEGER,
+	                      number_of_problems_solved INTEGER,
+	                      FOREIGN KEY (userid) REFERENCES users(userid)
+			      );
 
-    INSERT INTO codekata(userid,number_of_problems_solved) VALUES(1,50),(2,80),(3,20),(4,40),(5,75);
+   INSERTING VALUES INTO CODEKATA------------------>
+
+    INSERT INTO codekata(userid,number_of_problems_solved) VALUES(1,50),
+    
+    INSERT INTO codekata(userid,number_of_problems_solved) VALUES(2,80),
+    
+    INSERT INTO codekata(userid,number_of_problems_solved) VALUES(3,20),
+    
+    INSERT INTO codekata(userid,number_of_problems_solved) VALUES(4,40),
+    
+    INSERT INTO codekata(userid,number_of_problems_solved) VALUES(5,75);
 
     
---company drives
+--company drives---->
 
  CREATE TABLE company_drives(
                               driveid INTEGER AUTO_INCREMENT PRIMARY KEY,
