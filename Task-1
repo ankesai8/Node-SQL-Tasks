@@ -231,6 +231,7 @@ GROUP BY courses.courseid;
  SELECT mentorname FROM mentors;
  
  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
  7.list the number of students that are assigned for a mentor
 USE students;
 
@@ -238,4 +239,5 @@ SELECT mentors.mentorid,mentors.mentorname,COUNT(users.mentorid)
 FROM mentors,users
 WHERE mentors.mentorid=users.mentorid 
 GROUP BY mentors.mentorid;
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
